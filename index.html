@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyen Thi Ngoc Mai — Policy Researcher & Diplomatic Specialist</title>
+  <meta name="description" content="Portfolio of Nguyen Thi Ngoc Mai (Mai Ngoc Nguyen), International Relations researcher and public policy specialist based in Hanoi, Vietnam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #fcfcfc;
+      --bg-card: #f9f9f9;
+      --bg-card-hover: #f3f3f3;
+      --text-main: #111111;
+      --text-muted: #555555;
+      --text-light: #888888;
+      --grid-line: rgba(0, 0, 0, 0.07);
+      --border: #e6e6e6;
+      --accent-pill: #e6f9fa;
+      --accent-cyan: #0aa5ba;
+      --pill-border: #13b2c6;
+      --btn-black-bg: #111111;
+      --btn-black-text: #ffffff;
+      --tag-bg: #f0f0f0;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.12);
+      --gold-frame: #cbb279;
+      --gold-rim: #8d733e;
+      --active-indicator: #111111;
+      --pulse-green: #10b981;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f1012;
+      --bg-alt: #141619;
+      --bg-card: #181b1f;
+      --bg-card-hover: #22262c;
+      --text-main: #f3f4f6;
+      --text-muted: #a1a1aa;
+      --text-light: #71717a;
+      --grid-line: rgba(255, 255, 255, 0.08);
+      --border: #27272a;
+      --accent-pill: rgba(19, 178, 198, 0.15);
+      --accent-cyan: #38bdf8;
+      --pill-border: #0ea5e9;
+      --btn-black-bg: #ffffff;
+      --btn-black-text: #0f1012;
+      --tag-bg: #27272a;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.5);
+      --gold-frame: #b39b5b;
+      --gold-rim: #6b5327;
+      --active-indicator: #ffffff;
+      --pulse-green: #34d399;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.25s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Background architectural dashed grid lines */
+    .grid-bg-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(20px, 1fr) 240px 720px 260px minmax(20px, 1fr);
+    }
+
+    .grid-line {
+      border-right: 1px dashed var(--grid-line);
+      height: 100%;
+    }
+
+    .grid-line:first-child {
+      border-left: 1px dashed var(--grid-line);
+    }
+
+    /* Main wrapper layout */
+    .layout-wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 1260px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 240px 1fr 260px;
+      padding: 48px 0 64px 0;
+    }
+
+    /* ----------------------------------------------------
+       LEFT COLUMN (Navigation & Contact)
+    ---------------------------------------------------- */
+    .left-col {
+      padding: 0 28px 0 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: calc(100vh - 112px);
+      position: sticky;
+      top: 48px;
+      height: calc(100vh - 112px);
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      margin-bottom: 48px;
+    }
+
+    .monogram-icon {
+      width: 36px;
+      height: 36px;
+      fill: var(--text-main);
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      list-style: none;
+    }
+
+    .nav-item {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      position: relative;
+      width: fit-content;
+      user-select: none;
+    }
+
+    .nav-item:hover {
+      color: var(--text-main);
+    }
+
+    .nav-item.active {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    /* Handwritten / circled "Active" badge like in screenshot */
+    .badge-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    .badge-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      background-color: var(--accent-pill);
+      padding: 2px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hand-drawn-circle {
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Left Inquiries block at bottom */
+    .inquiries-block {
+      margin-top: auto;
+      padding-top: 36px;
+    }
+
+    .inquiries-label {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-bottom: 6px;
+      font-weight: 400;
+    }
+
+    .email-link-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .inquiry-email {
+      font-size: 13.5px;
+      color: var(--text-main);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      word-break: break-all;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .copy-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 3px 6px;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      background-color: var(--tag-bg);
+      color: var(--text-main);
+    }
+
+    .location-tag {
+      font-size: 11.5px;
+      color: var(--text-light);
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ----------------------------------------------------
+       CENTER COLUMN (Hero, Story, Tab Views, Collage)
+    ---------------------------------------------------- */
+    .center-col {
+      padding: 0 44px;
+      min-width: 0;
+    }
+
+    .section-crumb {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-light);
+      margin-bottom: 24px;
+      text-transform: capitalize;
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 4.2vw, 48px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      color: var(--text-main);
+      margin-bottom: 32px;
+      max-width: 640px;
+    }
+
+    .bio-body {
+      font-size: 16.5px;
+      color: var(--text-muted);
+      line-height: 1.68;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 620px;
+      font-weight: 400;
+      margin-bottom: 52px;
+    }
+
+    .bio-body p strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* Collage bottom container (matching screenshot composition) */
+    .collage-section {
+      position: relative;
+      margin-top: 24px;
+      padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .collage-canvas {
+      position: relative;
+      width: 100%;
+      max-width: 620px;
+      min-height: 380px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    /* SVG squiggles and arrow doodles */
+    .collage-doodles-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Center workspace image */
+    .workspace-img-box {
+      width: 250px;
+      height: 290px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      background-color: var(--bg-alt);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .workspace-img-box:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .workspace-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .workspace-img-box .img-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 14px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+      color: #ffffff;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    /* Left floating icon badge (Diplomatic / Global Policy emblem) */
+    .floating-app-icon {
+      position: absolute;
+      left: 36px;
+      bottom: 110px;
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+      z-index: 4;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .floating-app-icon:hover {
+      transform: translateY(-5px) rotate(-4deg) scale(1.05);
+    }
+
+    .floating-app-icon svg {
+      width: 38px;
+      height: 38px;
+      fill: #38bdf8;
+    }
+
+    /* Right vintage framed oval photo */
+    .vintage-oval-frame {
+      position: absolute;
+      right: 20px;
+      bottom: 60px;
+      width: 140px;
+      height: 180px;
+      border-radius: 50% / 55%;
+      border: 4px solid var(--gold-frame);
+      outline: 1.5px solid var(--gold-rim);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18), inset 0 2px 6px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      z-index: 5;
+      background: #fdfaf2;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .vintage-oval-frame:hover {
+      transform: translateY(-4px) rotate(2deg) scale(1.03);
+    }
+
+    .vintage-oval-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: sepia(0.15) contrast(1.05);
+    }
+
+    .vintage-year-label {
+      position: absolute;
+      right: 90px;
+      top: 60px;
+      font-family: 'Caveat', cursive, sans-serif;
+      font-size: 26px;
+      color: var(--text-light);
+      transform: rotate(-8deg);
+      user-select: none;
+      z-index: 11;
+    }
+
+    /* Gallery switch pill at bottom of collage */
+    .collage-switch-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      background-color: var(--tag-bg);
+      padding: 4px 6px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+
+    .photo-tab-btn {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .photo-tab-btn:hover {
+      color: var(--text-main);
+    }
+
+    .photo-tab-btn.active {
+      background-color: var(--bg);
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ----------------------------------------------------
+       CONTENT SECTIONS (Tab-switchable & Scrollable)
+    ---------------------------------------------------- */
+    .content-panel {
+      display: none;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    .content-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card item styles */
+    .section-heading-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+    }
+
+    .section-desc {
+      font-size: 13.5px;
+      color: var(--text-light);
+    }
+
+    .cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .info-card:hover {
+      background-color: var(--bg-card-hover);
+      border-color: var(--text-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      gap: 16px;
+    }
+
+    .card-role {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .card-org {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin-top: 2px;
+    }
+
+    .card-period {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text-light);
+      white-space: nowrap;
+      background: var(--tag-bg);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .card-bullets {
+      list-style-type: none;
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-bullets li {
+      font-size: 14px;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 18px;
+      line-height: 1.55;
+    }
+
+    .card-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      color: var(--accent-cyan);
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    /* Tag pills inside cards */
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .mini-tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      background-color: var(--tag-bg);
+      color: var(--text-muted);
+      border-radius: 6px;
+    }
+
+    .metric-highlight {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .metric-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .metric-number {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .metric-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ----------------------------------------------------
+       RIGHT COLUMN (Visitor Counter, Mode, Social Pills)
+    ---------------------------------------------------- */
+    .right-col {
+      padding: 0 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 24px;
+      position: sticky;
+      top: 48px;
+      height: fit-content;
+    }
+
+    .visitor-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    /* Pulse equalizer animation */
+    .equalizer-wave {
+      display: flex;
+      align-items: flex-end;
+      gap: 2.5px;
+      height: 14px;
+    }
+
+    .eq-bar {
+      width: 2.5px;
+      background-color: var(--text-light);
+      border-radius: 1px;
+      animation: eqBounce 1.2s ease-in-out infinite alternate;
+    }
+
+    .eq-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
+    .eq-bar:nth-child(2) { height: 12px; animation-delay: 0.3s; }
+    .eq-bar:nth-child(3) { height: 9px; animation-delay: 0.2s; }
+    .eq-bar:nth-child(4) { height: 14px; animation-delay: 0.4s; }
+
+    @keyframes eqBounce {
+      0% { transform: scaleY(0.4); background-color: var(--text-light); }
+      100% { transform: scaleY(1); background-color: var(--pulse-green); }
+    }
+
+    /* Light / Dark Mode Toggle (screenshot style) */
+    .mode-toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    .mode-label {
+      font-weight: 500;
+    }
+
+    .switch-button {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      background-color: #d1d5db;
+      border-radius: 999px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background-color 0.25s ease;
+      display: flex;
+      align-items: center;
+      padding: 2px;
+    }
+
+    [data-theme="dark"] .switch-button {
+      background-color: #3b82f6;
+    }
+
+    .switch-knob {
+      width: 20px;
+      height: 20px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateX(0);
+    }
+
+    [data-theme="dark"] .switch-knob {
+      transform: translateX(20px);
+    }
+
+    /* Social / Action Pills (Follow on X style) */
+    .pill-btn-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .action-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--btn-black-bg);
+      color: var(--btn-black-text);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid var(--btn-black-bg);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .action-pill-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      opacity: 0.92;
+    }
+
+    .action-pill-btn svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .secondary-pill-btn {
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .secondary-pill-btn:hover {
+      background-color: var(--bg-card-hover);
+      color: var(--text-main);
+      border-color: var(--text-light);
+    }
+
+    /* ----------------------------------------------------
+       IMAGE LIGHTBOX MODAL & TOAST
+    ---------------------------------------------------- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      padding: 24px;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      max-width: 680px;
+      width: 100%;
+      padding: 32px;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--tag-bg);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-main);
+      font-size: 16px;
+    }
+
+    .toast-popup {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: var(--btn-black-bg);
+      color: var(--btn-black-text);
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1100;
+    }
+
+    .toast-popup.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ----------------------------------------------------
+       RESPONSIVENESS (Mobile & Tablet)
+    ---------------------------------------------------- */
+    @media (max-width: 1060px) {
+      .layout-wrapper {
+        grid-template-columns: 200px 1fr 200px;
+        padding: 32px 16px;
+      }
+      .grid-bg-container {
+        display: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .layout-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 24px 20px 80px 20px;
+      }
+      .left-col {
+        height: auto;
+        position: static;
+        padding: 0;
+      }
+      .brand-logo {
+        margin-bottom: 24px;
+      }
+      .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .inquiries-block {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+      }
+      .center-col {
+        padding: 0;
+      }
+      .right-col {
+        height: auto;
+        position: static;
+        align-items: flex-start;
+        padding: 0;
+        border-top: 1px solid var(--border);
+        padding-top: 24px;
+      }
+      .pill-btn-group {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .vintage-oval-frame {
+        right: 0;
+        width: 120px;
+        height: 155px;
+      }
+      .floating-app-icon {
+        left: 0;
+        width: 56px;
+        height: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background decorative dashed vertical architectural guides -->
+  <div class="grid-bg-container" aria-hidden="true">
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+  </div>
+
+  <div class="layout-wrapper">
+
+    <!-- ------------------------------------------------
+         LEFT NAVIGATION & CONTACT COLUMN
+    ------------------------------------------------- -->
+    <aside class="left-col">
+      <div>
+        <!-- Editorial Monogram Logo -->
+        <a href="#about" class="brand-logo" onclick="switchTab('about')">
+          <svg class="monogram-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 32V10C6 10 11 24 16 24C21 24 26 10 26 10V32" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26 32V18C26 18 30 26 34 26C38 26 38 18 38 18" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div class="brand-text">Mai Ngoc Nguyen</div>
+            <div class="brand-sub">Policy & Diplomacy</div>
+          </div>
+        </a>
+
+        <!-- Vertical Menu Navigation -->
+        <nav>
+          <ul class="nav-menu">
+            <li>
+              <a class="nav-item active" data-tab="about" onclick="switchTab('about')">About</a>
+            </li>
+            <li>
+              <a class="nav-item" data-tab="experience" onclick="switchTab('experience')">
+                Work
+                <span class="badge-wrapper">
+                  <span class="badge-pill">Active</span>
+                  <!-- Hand-drawn cyan sketch oval loop around badge -->
+                  <svg class="hand-drawn-circle" viewBox="0 0 68 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33 4C14 4 3 9 4 17C5 25 18 30 35 30C53 30 65 24 64 16C63 7 46 3 28 5" stroke="#0aa5ba" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-item" data-tab="publications" onclick="switchTab('publications')">Publications</a>
+            </li>
+            <li>
+              <a class="nav-item" data-tab="leadership" onclick="switchTab('leadership')">Leadership</a>
+            </li>
+            <li>
+              <a class="nav-item" data-tab="honors" onclick="switchTab('honors')">Honors & Skills</a>
+            </li>
+            <li>
+              <a class="nav-item" data-tab="resume" onclick="openCvModal()">Resume (PDF)</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Inquiries Block (Screenshot layout) -->
+      <div class="inquiries-block">
+        <div class="inquiries-label">For new inquiries & partnerships:</div>
+        <div class="email-link-wrapper">
+          <a class="inquiry-email" onclick="copyEmail()" title="Click to copy email">ngngocmai192.work@gmail.com</a>
+          <button class="copy-btn" onclick="copyEmail()" aria-label="Copy Email">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Copy
+          </button>
+        </div>
+        <div class="location-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Dong Da, Ha Noi, Viet Nam
+        </div>
+      </div>
+    </aside>
+
+    <!-- ------------------------------------------------
+         CENTER CONTENT COLUMN
+    ------------------------------------------------- -->
+    <main class="center-col">
+
+      <!-- VIEW 1: ABOUT (Exact screenshot composition) -->
+      <section id="panel-about" class="content-panel active">
+        <div class="section-crumb">About</div>
+        <h1 class="hero-title">Diplomatic researcher & policy specialist based in Hanoi.</h1>
+
+        <div class="bio-body">
+          <p>
+            I’m an international relations researcher and project coordinator, currently serving as <strong>Executive Assistant to the CEO at AN Japan</strong> and graduating top 5 from the <strong>Diplomatic Academy of Vietnam</strong> (GPA: 3.89/4.0).
+          </p>
+          <p>
+            With a focus on multilateral diplomacy, bilateral negotiations, and public-private partnerships, my work bridges academic rigor with high-impact global engagement. From coordinating public diplomacy programs at the <strong>United States Embassy in Hanoi</strong> to researching climate finance and agri-photovoltaics at <strong>GIZ Vietnam</strong>, I focus on navigating Vietnam's strategic role amidst evolving international dynamics.
+          </p>
+          <p>
+            Over the years, I've had the privilege of founding <strong>FinLit</strong> to teach financial literacy to over 2,000 students, publishing research on the <em>Brussels Effect</em> and EU digital norms diffusion, and representing Vietnam across premier diplomatic conferences. Every initiative deepens my dedication to bridging Vietnam's strategic engagement with the global community.
+          </p>
+        </div>
+
+        <!-- Collage showcase (Desk setup, Floating badge, Vintage oval portrait, squiggles) -->
+        <div class="collage-section">
+          <div class="collage-canvas">
+            
+            <!-- SVG hand-drawn arrows and doodle curves connecting photos -->
+            <svg class="collage-doodles-svg" viewBox="0 0 620 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Smooth pencil doodle arc to oval portrait -->
+              <path d="M370 240 C 440 210, 480 180, 505 130 C 518 105, 490 85, 465 105 C 440 125, 455 170, 470 200" stroke="#71717a" stroke-width="1.4" stroke-dasharray="3 3" opacity="0.6"/>
+              <!-- Vintage milestone scribble arrow -->
+              <path d="M495 100 C 510 88, 525 80, 540 85" stroke="#71717a" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+              <!-- Little hand-drawn flower/star doodle at bottom -->
+              <path d="M380 345 L380 365 M370 355 L390 355 M373 348 L387 362 M373 362 L387 348" stroke="#f97316" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+            </svg>
+
+            <!-- Floating Global Affairs Badge on the left -->
+            <div class="floating-app-icon" title="Diplomacy & Global Governance" onclick="switchTab('experience')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+
+            <!-- Center workspace photo -->
+            <div class="workspace-img-box" id="main-display-photo" onclick="togglePhotoView()" title="Click to view alternate portrait">
+              <img id="active-showcase-img" src="assets/workspace_desk.jpg" alt="Research workspace desk setup" loading="lazy">
+              <div class="img-caption" id="active-showcase-caption">Research desk, Hanoi</div>
+            </div>
+
+            <!-- Vintage Oval framed portrait on the right -->
+            <div class="vintage-year-label">2001</div>
+            <div class="vintage-oval-frame" onclick="setPhoto('vintage')" title="Vintage archival portrait">
+              <img src="assets/vintage_portrait.jpg" alt="Vintage childhood studio portrait" loading="lazy">
+            </div>
+
+          </div>
+
+          <!-- Switcher to view all 3 photos seamlessly -->
+          <div class="collage-switch-bar">
+            <button class="photo-tab-btn active" id="btn-photo-desk" onclick="setPhoto('desk')">Desk Studio</button>
+            <button class="photo-tab-btn" id="btn-photo-vintage" onclick="setPhoto('vintage')">Vintage Frame</button>
+            <button class="photo-tab-btn" id="btn-photo-diplomat" onclick="setPhoto('diplomat')">Diplomatic Portrait</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 2: WORK EXPERIENCES -->
+      <section id="panel-experience" class="content-panel">
+        <div class="section-crumb">Experience</div>
+        <div class="section-heading-row">
+          <h2 class="section-title">Professional Experience</h2>
+          <span class="section-desc">Diplomacy, Governance & Management</span>
+        </div>
+
+        <div class="cards-stack">
+          <!-- Card 1: AN JAPAN -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h3 class="card-role">Executive Assistant for CEO</h3>
+                <div class="card-org">AN JAPAN</div>
+              </div>
+              <span class="card-period">May 2026 – Present</span>
+            </div>
+            <ul class="card-bullets">
+              <li>Manage databases of over 200 clients per month, driving business planning and Profit & Loss (P&L) reporting.</li>
+              <li>Coordinate with premier business associations and financial partners, including the 1985 Entrepreneurs Association, Golf Associations, VIB Bank, and SHB Bank.</li>
+              <li>Lead cross-functional operations between the CEO and department heads to streamline organizational delivery.</li>
+            </ul>
+            <div class="card-tags">
+              <span class="mini-tag">Executive Operations</span>
+              <span class="mini-tag">P&L Analysis</span>
+              <span class="mini-tag">Banking & Partnerships</span>
+            </div>
+          </article>
+
+          <!-- Card 2: GIZ Vietnam -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h3 class="card-role">Technical Intern</h3>
+                <div class="card-org">Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ)</div>
+              </div>
+              <span class="card-period">Oct 2025 – Apr 2026</span>
+            </div>
+            <ul class="card-bullets">
+              <li>Conducted 4 multilateral projects in close collaboration with public sector ministries and international partners.</li>
+              <li>Managed contract negotiations, Terms of References (TOR), partner engagement, and cost estimation frameworks.</li>
+              <li>Spearheaded applied policy research on sustainable coffee value chains, agri-photovoltaics, climate finance, and Vietnam agricultural policy.</li>
+              <li>Monitored key regulatory developments and translated high-level technical documentation into actionable briefs.</li>
+            </ul>
+            <div class="card-tags">
+              <span class="mini-tag">Climate Finance</span>
+              <span class="mini-tag">Agri-Photovoltaics</span>
+              <span class="mini-tag">Public-Private Partnerships</span>
+            </div>
+          </article>
+
+          <!-- Card 3: US Embassy -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h3 class="card-role">Intern at Public Diplomacy Section</h3>
+                <div class="card-org">The United States Embassy in Hanoi</div>
+              </div>
+              <span class="card-period">Mar 2024 – Nov 2025</span>
+            </div>
+            <ul class="card-bullets">
+              <li>Served on the American Center team, executing 5 flagship programs including the U.S.–Vietnam Friendship Festival 2025, Panel Discussion on Innovation in FinTech 2025, and American English Club.</li>
+              <li>Liaised with American Chamber of Commerce (AmCham) executive members, industry associations, and senior Vietnam government representatives.</li>
+              <li>Drafted public diplomacy briefings, coordinated bilateral event logistics, and supported high-level cultural diplomacy initiatives.</li>
+            </ul>
+            <div class="card-tags">
+              <span class="mini-tag">U.S. Diplomacy</span>
+              <span class="mini-tag">FinTech Panel</span>
+              <span class="mini-tag">AmCham Liaison</span>
+            </div>
+          </article>
+
+          <!-- Card 4: Diplomatic Academy of Vietnam -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h3 class="card-role">Student Leader / Intern</h3>
+                <div class="card-org">Faculty of International Politics and Diplomacy, DAV</div>
+              </div>
+              <span class="card-period">Dec 2022 – Jun 2025</span>
+            </div>
+            <ul class="card-bullets">
+              <li>Assisted faculty lecturers with geopolitical research, policy paperwork, diplomatic event analysis, and media productions.</li>
+              <li>Led organization of over 10 diplomatic events, including the Anniversary of Friendship between Vietnam and Azerbaijan, TH Company Tour, and the DAV Students Official Visit to the Indian Embassy in Hanoi.</li>
+            </ul>
+            <div class="card-tags">
+              <span class="mini-tag">Diplomatic Protocol</span>
+              <span class="mini-tag">Embassy Delegations</span>
+              <span class="mini-tag">Academic Event Production</span>
+            </div>
+          </article>
+
+          <!-- Card 5: Supreme People's Court TV -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h3 class="card-role">News Editor Intern</h3>
+                <div class="card-org">Cong Ly TV — The Editorial Body of the Supreme People's Court</div>
+              </div>
+              <span class="card-period">May 2023 – Aug 2023</span>
+            </div>
+            <ul class="card-bullets">
+              <li>Researched international geopolitical affairs, analyzed news wires and state documents, and authored published broadcast articles.</li>
+              <li>Developed specialized media documentary project on religion and belief, focusing on comparative Buddhism and Catholicism in contemporary Vietnam.</li>
+            </ul>
+            <div class="card-tags">
+              <span class="mini-tag">Media Journalism</span>
+              <span class="mini-tag">Judicial Communications</span>
+              <span class="mini-tag">Investigative Research</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- VIEW 3: PUBLICATIONS & RESEARCH -->
+      <section id="panel-publications" class="content-panel">
+        <div class="section-crumb">Research</div>
+        <div class="section-heading-row">
+          <h2 class="section-title">Academic Publications</h2>
+          <span class="section-desc">Middle power strategy, digital norms & security</span>
+        </div>
+
+        <div class="cards-stack">
+          <!-- Paper 1 -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <span class="mini-tag" style="background-color: var(--accent-pill); color: var(--accent-cyan);">Principal Investigator</span>
+                <h3 class="card-role" style="margin-top: 8px;">The Brussels Effect and EU Digital Norms Diffusion Since 2016: Implications for Vietnam as a Middle Power</h3>
+                <div class="card-org">Accepted for publication at the 2nd DAV Academic Forum (DAF)</div>
+              </div>
+              <span class="card-period">Sept 2026</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">
+              Theme: <em>Vietnam’s Strategic Choices: Middle Power Diplomacy in a Fragmented World</em>. Examines how the European Union's regulatory frameworks in AI, privacy, and digital trade diffuse into ASEAN middle powers, with policy roadmaps for Vietnam's digital sovereignty.
+            </p>
+          </article>
+
+          <!-- Paper 2 -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <span class="mini-tag" style="background-color: var(--accent-pill); color: var(--accent-cyan);">Principal Investigator</span>
+                <h3 class="card-role" style="margin-top: 8px;">Japan’s Internationalization and Sustainable Development Policies in Higher Education: A National Identity Perspective and the ‘Glonacal Agency Heuristic’ Model</h3>
+                <div class="card-org">Published at 2nd International Conference on Innovation & Sustainability (ICIS 2026)</div>
+              </div>
+              <span class="card-period">Aug 2026</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">
+              Investigates higher education reform, national identity preservation, and multilateral sustainable development policies in East Asia using the theoretical Glonacal Agency Heuristic framework.
+            </p>
+          </article>
+
+          <!-- Paper 3 -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <span class="mini-tag">Co-Principal Investigator</span>
+                <h3 class="card-role" style="margin-top: 8px;">Talking vs Arming: Diplomatic Visits and Military Spending Amidst Rising Geopolitical Tensions</h3>
+                <div class="card-org">Abstract completed; preparing submission for peer-reviewed journal</div>
+              </div>
+              <span class="card-period">Jul 2026</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">
+              Quantitative and qualitative evaluation of whether high-level diplomatic state visits offset or correlate with defense budget expansions in disputed maritime corridors.
+            </p>
+          </article>
+
+          <!-- Paper 4 -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <span class="mini-tag">Research Team Member</span>
+                <h3 class="card-role" style="margin-top: 8px;">The Use of Unmanned Aerial Vehicles in International Conflicts: Current Practices and Policy Recommendations from a Global Governance Perspective</h3>
+                <div class="card-org">DAV Strategic Research Project</div>
+              </div>
+              <span class="card-period">Dec 2026</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">
+              Policy analysis assessing autonomous systems, international humanitarian law (IHL), and multilateral treaty enforcement regarding drone warfare in the Asia-Pacific.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- VIEW 4: LEADERSHIP & IMPACT -->
+      <section id="panel-leadership" class="content-panel">
+        <div class="section-crumb">Leadership</div>
+        <div class="section-heading-row">
+          <h2 class="section-title">Community & Initiatives</h2>
+          <span class="section-desc">Youth empowerment & educational access</span>
+        </div>
+
+        <!-- Metric highlights -->
+        <div class="metric-highlight">
+          <div class="metric-box">
+            <div class="metric-number">2,000+</div>
+            <div class="metric-label">Students Reached</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-number">1,000,000+</div>
+            <div class="metric-label">Social Media Reach</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-number">50M+ VND</div>
+            <div class="metric-label">Sponsorships Raised</div>
+          </div>
+        </div>
+
+        <div class="cards-stack">
+          <!-- FinLit -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h3 class="card-role">Founder & General Director</h3>
+                <div class="card-org">FinLit — Financial Literacy For Vietnamese Student Program</div>
+              </div>
+              <span class="card-period">Jul 2023 – Jun 2024</span>
+            </div>
+            <ul class="card-bullets">
+              <li>Founded and directed national non-profit educational program offering financial literacy seminars and workshops.</li>
+              <li>Engaged 2,000+ students nationwide, achieving an 80% measured educational retention effectiveness rate.</li>
+              <li>Successfully pitched and secured 30 Million VND in sponsorship funding from 10 corporate and institutional partners.</li>
+            </ul>
+          </article>
+
+          <!-- DAV's Leaders -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h3 class="card-role">Head of Content Department</h3>
+                <div class="card-org">DAV’s Leaders 2023 — Students' Association of DAV</div>
+              </div>
+              <span class="card-period">Jul 2023 – Dec 2023</span>
+            </div>
+            <ul class="card-bullets">
+              <li>Directed comprehensive content strategy, branding, and promotional campaigns for DAV's premier flagship student leader incubator.</li>
+              <li>Impacted over 2,000 students directly, with viral media campaigns achieving over 1,000,000 organic impressions across platforms.</li>
+            </ul>
+          </article>
+
+          <!-- YBOER -->
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h3 class="card-role">Project Manager</h3>
+                <div class="card-org">YBOER — YenBai Open Educational Resources for Students</div>
+              </div>
+              <span class="card-period">Aug 2021 – Feb 2022</span>
+            </div>
+            <ul class="card-bullets">
+              <li>Secured 20 Million VND in funding to establish open-access digital learning repositories for underserved high school students in Yen Bai province.</li>
+              <li>Organized 3 major public symposiums attracting over 1,000 student accounts and 200 interactive attendees.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- VIEW 5: HONORS, EDUCATION & SKILLS -->
+      <section id="panel-honors" class="content-panel">
+        <div class="section-crumb">Qualifications</div>
+        <div class="section-heading-row">
+          <h2 class="section-title">Education, Honors & Skills</h2>
+          <span class="section-desc">Academic excellence & international competencies</span>
+        </div>
+
+        <!-- Education -->
+        <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 16px; color: var(--text-main);">Education</h3>
+        <div class="cards-stack" style="margin-bottom: 36px;">
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h4 class="card-role">Diplomatic Academy of Vietnam (Học viện Ngoại giao)</h4>
+                <div class="card-org">Bachelor in International Relations</div>
+              </div>
+              <span class="card-period">Oct 2022 – Jul 2026</span>
+            </div>
+            <ul class="card-bullets">
+              <li><strong>GPA: 3.89 / 4.0</strong> — Ranked 5th in Entire Class.</li>
+              <li>Awarded the <strong>Academy’s Excellence Award</strong> for Outstanding Students.</li>
+              <li>Core training: Policy analysis, event organization, diplomatic protocols, bilateral negotiation, and research writing.</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <div class="card-header-flex">
+              <div>
+                <h4 class="card-role">Nguyen Tat Thanh High School for the Gifted</h4>
+                <div class="card-org">Yen Bai Province — Specialized Mathematics Division</div>
+              </div>
+              <span class="card-period">Sep 2019 – May 2022</span>
+            </div>
+            <ul class="card-bullets">
+              <li><strong>Mathematics Major GPA: 8.9 / 10.0</strong></li>
+              <li>Gold Medal in Chess & Silver Medal in AIMO (Asian International Mathematical Olympiad).</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Awards & Honors -->
+        <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 16px; color: var(--text-main);">Awards & Accolades</h3>
+        <div class="cards-stack" style="margin-bottom: 36px;">
+          <article class="info-card">
+            <ul class="card-bullets" style="margin: 0;">
+              <li><strong>Outstanding Delegate of the UNSC</strong> — International Vietnam Model United Nations Conference (IVMUN 2023).</li>
+              <li><strong>Top 08 Finalist</strong> — Room XX Debate 2023 on Global Human Rights, organized by the United Nations Development Programme (UNDP).</li>
+              <li><strong>Appointed Delegate</strong> — Youth For SDG16 Roundtable: <em>Towards An Inclusive Climate Future 2023</em>.</li>
+              <li><strong>Top 05 Student Leaders</strong> — DAV’s Leaders 2022, Faculty of International Politics and Diplomacy.</li>
+              <li><strong>Commendation Certificate</strong> — For Outstanding Contributions to Student Union Movements (2022–2023).</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Languages & Skills -->
+        <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 16px; color: var(--text-main);">Languages & Core Capabilities</h3>
+        <div class="info-card">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 20px;">
+            <div style="background: var(--tag-bg); padding: 14px; border-radius: 8px;">
+              <div style="font-size: 12px; color: var(--text-light);">English</div>
+              <div style="font-size: 18px; font-weight: 700; color: var(--text-main);">IELTS 7.5</div>
+              <div style="font-size: 11px; color: var(--accent-cyan);">Professional Working Proficiency</div>
+            </div>
+            <div style="background: var(--tag-bg); padding: 14px; border-radius: 8px;">
+              <div style="font-size: 12px; color: var(--text-light);">French</div>
+              <div style="font-size: 18px; font-weight: 700; color: var(--text-main);">DELF B1</div>
+              <div style="font-size: 11px; color: var(--accent-cyan);">Intermediate Diplomatic French</div>
+            </div>
+            <div style="background: var(--tag-bg); padding: 14px; border-radius: 8px;">
+              <div style="font-size: 12px; color: var(--text-light);">Vietnamese</div>
+              <div style="font-size: 18px; font-weight: 700; color: var(--text-main);">Native</div>
+              <div style="font-size: 11px; color: var(--accent-cyan);">Mother Tongue / Official</div>
+            </div>
+          </div>
+
+          <div style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6;">
+            <strong>Core Competencies:</strong> Multilateral Policy Research, High-level Event Protocol, Stakeholder Engagement, Contract Negotiation & TOR Drafting, Climate Policy Analysis, Media Content Production, Microsoft Office Suite (Word, Excel, PowerPoint), Video Editing & Photography.
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ------------------------------------------------
+         RIGHT METADATA COLUMN (Visitor Counter, Mode, Pills)
+    ------------------------------------------------- -->
+    <aside class="right-col">
+      <!-- Live Visitor counter with animated bars (Screenshot element) -->
+      <div class="visitor-box">
+        <span id="visitor-count">45,395</span> visitors
+        <div class="equalizer-wave" aria-label="Live Activity Status">
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+        </div>
+      </div>
+
+      <!-- Theme Mode toggle switch (Screenshot element) -->
+      <div class="mode-toggle-row">
+        <span class="mode-label">Mode</span>
+        <button class="switch-button" id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Light and Dark Mode">
+          <div class="switch-knob"></div>
+        </button>
+      </div>
+
+      <!-- Action & Social Pill Buttons (Screenshot element) -->
+      <div class="pill-btn-group">
+        <a class="action-pill-btn" href="https://linkedin.com/in/ngngocmai192" target="_blank" rel="noopener noreferrer">
+          Follow on LinkedIn
+          <svg viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+
+        <button class="action-pill-btn secondary-pill-btn" onclick="openCvModal()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Curriculum Vitae
+        </button>
+
+        <button class="action-pill-btn secondary-pill-btn" onclick="copyPhone()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Call (+84) 835 357 097
+        </button>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ------------------------------------------------
+       MODAL: CV DOCUMENT VIEWER & DOWNLOAD
+  ------------------------------------------------- -->
+  <div class="modal-overlay" id="cv-modal" onclick="closeCvModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeCvModal()" aria-label="Close modal">✕</button>
+      <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 8px;">Curriculum Vitae</h2>
+      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+        Nguyen Thi Ngoc Mai — Diplomatic Academy of Vietnam (Top 5 Graduate)
+      </p>
+
+      <div style="background: var(--tag-bg); border-radius: 12px; padding: 20px; margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <div style="font-weight: 700; font-size: 15px;">2. Curriculum Vitae Nguyen Thi Ngoc Mai.pdf</div>
+            <div style="font-size: 12px; color: var(--text-light);">Original Academic & Professional Resume (109 KB)</div>
+          </div>
+          <a class="action-pill-btn" href="assets/CV_Nguyen_Thi_Ngoc_Mai.pdf" download="CV_Nguyen_Thi_Ngoc_Mai.pdf">
+            Download PDF ↓
+          </a>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: flex-end;">
+        <a class="action-pill-btn secondary-pill-btn" href="assets/CV_Nguyen_Thi_Ngoc_Mai.pdf" target="_blank">
+          Open in New Tab ↗
+        </a>
+        <button class="action-pill-btn" onclick="closeCvModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div class="toast-popup" id="toast">Copied to clipboard!</div>
+
+  <!-- ------------------------------------------------
+       CLIENT JAVASCRIPT
+  ------------------------------------------------- -->
+  <script>
+    // Theme Management (Light / Dark)
+    function initTheme() {
+      const savedTheme = localStorage.getItem('site_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('site_theme', next);
+    }
+
+    initTheme();
+
+    // Tab Navigation
+    function switchTab(tabId) {
+      // Update nav link active state
+      document.querySelectorAll('.nav-item').forEach(el => {
+        el.classList.toggle('active', el.getAttribute('data-tab') === tabId);
+      });
+
+      // Switch panels
+      document.querySelectorAll('.content-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+
+      const activePanel = document.getElementById('panel-' + tabId);
+      if (activePanel) {
+        activePanel.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Photo Collage Carousel & Switcher
+    const photos = {
+      desk: {
+        src: 'assets/workspace_desk.jpg',
+        caption: 'Research desk, Hanoi'
+      },
+      vintage: {
+        src: 'assets/vintage_portrait.jpg',
+        caption: 'Studio archive portrait, 2001'
+      },
+      diplomat: {
+        src: 'assets/professional_portrait.jpg',
+        caption: 'Diplomatic delegation portrait'
+      }
+    };
+
+    let currentPhotoKey = 'desk';
+
+    function setPhoto(key) {
+      currentPhotoKey = key;
+      const img = document.getElementById('active-showcase-img');
+      const caption = document.getElementById('active-showcase-caption');
+      
+      img.style.opacity = '0.3';
+      setTimeout(() => {
+        img.src = photos[key].src;
+        caption.textContent = photos[key].caption;
+        img.style.opacity = '1';
+      }, 150);
+
+      document.querySelectorAll('.photo-tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.id === 'btn-photo-' + key);
+      });
+    }
+
+    function togglePhotoView() {
+      const order = ['desk', 'vintage', 'diplomat'];
+      const nextIndex = (order.indexOf(currentPhotoKey) + 1) % order.length;
+      setPhoto(order[nextIndex]);
+    }
+
+    // Modal Control
+    function openCvModal() {
+      document.getElementById('cv-modal').classList.add('open');
+    }
+
+    function closeCvModal(e) {
+      if (!e || e.target.id === 'cv-modal' || e.target.classList.contains('modal-close-btn')) {
+        document.getElementById('cv-modal').classList.remove('open');
+      }
+    }
+
+    // Copy to Clipboard Helpers
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+
+    function copyEmail() {
+      navigator.clipboard.writeText('ngngocmai192.work@gmail.com').then(() => {
+        showToast('Email copied: ngngocmai192.work@gmail.com');
+      }).catch(() => {
+        showToast('Email: ngngocmai192.work@gmail.com');
+      });
+    }
+
+    function copyPhone() {
+      navigator.clipboard.writeText('+84835357097').then(() => {
+        showToast('Phone copied: (+84) 835 357 097');
+      }).catch(() => {
+        showToast('Phone: (+84) 835 357 097');
+      });
+    }
+
+    // Live Visitor Ticker Simulation
+    let count = 45395;
+    setInterval(() => {
+      if (Math.random() > 0.65) {
+        count += 1;
+        const el = document.getElementById('visitor-count');
+        if (el) el.textContent = count.toLocaleString();
+      }
+    }, 4500);
+
+    // Escape key modal close
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCvModal();
+      }
+    });
+  </script>
+</body>
+</html>
